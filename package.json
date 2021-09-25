@@ -1,12 +1,14 @@
 {
   "name": "@requarks/vuex-pathify",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Ridiculously simple Vuex setup + wiring",
   "main": "dist/vuex-pathify.js",
   "module": "dist/vuex-pathify.esm.js",
   "jsnext:main": "dist/vuex-pathify.esm.js",
+  "typings": "types/index.d.ts",
   "files": [
-    "dist/*"
+    "dist/*",
+    "types/*.d.ts"
   ],
   "scripts": {
     "build": "npm run build-esm && npm run build-cjs",
@@ -31,6 +33,13 @@
     "lodash.clonedeep": "^4.5.0"
   },
   "devDependencies": {
-    "esbuild": "^0.13.2"
+    "esbuild": "0.13.2",
+    "typescript": "4.4.3",
+    "vue": "3.2.19",
+    "vuex": "4.0.2"
+  },
+  "peerDependencies": {
+    "vue": ">=2.5.19",
+    "vuex": ">=3.0.1"
   }
 }
