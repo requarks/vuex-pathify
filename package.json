@@ -1,0 +1,36 @@
+{
+  "name": "@requarks/vuex-pathify",
+  "version": "2.0.0",
+  "description": "Ridiculously simple Vuex setup + wiring",
+  "main": "dist/vuex-pathify.js",
+  "module": "dist/vuex-pathify.esm.js",
+  "jsnext:main": "dist/vuex-pathify.esm.js",
+  "files": [
+    "dist/*"
+  ],
+  "scripts": {
+    "build": "npm run build-esm && npm run build-cjs",
+    "build-esm": "esbuild src/main.js --bundle --minify --format=esm --target=es2020,chrome84,edge90,safari11,firefox82,node14 --outfile=dist/vuex-pathify.esm.js",
+    "build-cjs": "esbuild src/main.js --bundle --minify --format=cjs --target=es2020,chrome84,edge90,safari11,firefox82,node14 --outfile=dist/vuex-pathify.js"
+  },
+  "author": "Dave Stewart <dave@davestewart.io>",
+  "homepage": "https://github.com/davestewart/vuex-pathify#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/requarks/vuex-pathify.git"
+  },
+  "keywords": [
+    "vuex",
+    "store"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davestewart/vuex-pathify/issues"
+  },
+  "dependencies": {
+    "lodash.clonedeep": "^4.5.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.13.2"
+  }
+}
